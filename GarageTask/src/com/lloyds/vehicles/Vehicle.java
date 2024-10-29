@@ -1,12 +1,12 @@
 package com.lloyds.vehicles;
 
-public class Vehicle {
+public abstract class Vehicle {
     private String make;
     private String colour;
     private String fuelType;
     private double tyreSize;
     private int price;
-    private int multiplier;
+    public abstract double calculateBill();
 
     public Vehicle(String make, String colour, String fuelType, double tyreSize, int price) {
         this.make = make;
@@ -57,6 +57,7 @@ public class Vehicle {
     public void setPrice(int price) {
         this.price = price;
     }
+
 
     @Override
     public String toString() {

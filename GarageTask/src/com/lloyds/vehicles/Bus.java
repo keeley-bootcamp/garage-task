@@ -12,6 +12,12 @@ public class Bus extends Vehicle {
         this.numOperators = numOperators;
     }
 
+    @Override
+    public double calculateBill() {
+        double randomNum = Math.random();
+        return randomNum * 5000;
+    }
+
     public int getPassengerCapacity() {
         return passengerCapacity;
     }

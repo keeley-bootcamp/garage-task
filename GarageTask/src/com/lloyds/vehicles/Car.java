@@ -12,6 +12,12 @@ public class Car extends Vehicle {
         this.bootSize = bootSize;
     }
 
+    @Override
+    public double calculateBill() {
+        double randomNum = Math.random();
+        return randomNum * 1000;
+    }
+
     public int getNumDoors() {
         return numDoors;
     }

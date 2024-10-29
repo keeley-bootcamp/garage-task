@@ -32,5 +32,8 @@ public class Main {
         garage1.addVehicle(bus1);
         garage1.addVehicle(bus2);
         garage1.addVehicle(bus3);
+
+        //garage1.calculateBill();
+        garage1.removeByType("Bus");
     }
 }

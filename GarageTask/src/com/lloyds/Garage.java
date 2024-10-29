@@ -22,8 +22,30 @@ public class Garage {
         garage.add(vehicle);
     }
 
-    public static double calculateBill(Vehicle vehicle) {
-        double randomNum = Math.random();
-        return randomNum * vehicle.multiplier;
+    public void removeVehicle(int id) {
+        garage.remove(id);
+    }
+
+    public void clearGarage() {
+        garage.clear();
+    }
+
+    public void removeByType(String type) {
+        if (type.equalsIgnoreCase("Car")) {
+            this.garage.removeIf(vehicle -> vehicle instanceof Car);
+        }
+        if (type.equalsIgnoreCase("Aeroplane")) {
+            this.garage.removeIf(vehicle -> vehicle instanceof Aeroplane);
+        }
+        if (type.equalsIgnoreCase("Bus")) {
+            this.garage.removeIf(vehicle -> vehicle instanceof Bus);
+        }
+    }
+
+    public void calculateBill() {
+        for (Vehicle vehicle : this.garage) {
+            System.out.println(vehicle.toString());
+            System.out.println("Bill: £" + Math.round(vehicle.calculateBill() * 100.0) / 100.0);
+        }
     }
 }

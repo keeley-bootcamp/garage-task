@@ -12,6 +12,12 @@ public class Aeroplane extends Vehicle{
         this.airlinesThatUse = airlinesThatUse;
     }
 
+    @Override
+    public double calculateBill() {
+        double randomNum = Math.random();
+        return randomNum * 10000;
+    }
+
     public String getModel() {
         return model;
     }
